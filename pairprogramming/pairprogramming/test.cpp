@@ -1,6 +1,7 @@
 #include"catch.hpp"
+#include"StringCalculator.hpp"
 #include<string>
-using std::string
+using std::string;
 
 TEST_CASE("String Calculator Tests") {
 
@@ -22,7 +23,7 @@ TEST_CASE("String Calculator Tests") {
 
 	}
 
-	SECTIN("Number Delimination Number Delimination Number"){
+	SECTION("Number Delimination Number Delimination Number"){
 	}
 
 	SECTION("Negative Number") {
