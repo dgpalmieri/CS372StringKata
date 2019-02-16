@@ -7,12 +7,12 @@ TEST_CASE("String Calculator Tests") {
 
 	SECTION("Empty Sring")
 	{
-
+		REQUIRE(StringCalculator("") == 0);
 	}
 
 	SECTION("Number")
 	{
-
+		
 	}
 
 	SECTION("Number Comma Number") {
