@@ -12,7 +12,8 @@ TEST_CASE("String Calculator Tests") {
 
 	SECTION("Single number returns itself")
 	{
-		
+		REQUIRE(StringCalculator("0") == 0);
+
 	}
 
 	SECTION("Number Comma Number") {
