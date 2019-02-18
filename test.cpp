@@ -5,12 +5,12 @@ using std::string;
 
 TEST_CASE("String Calculator Tests") {
 
-	SECTION("Empty Sring")
+	SECTION("Empty String returns 0")
 	{
 		REQUIRE(StringCalculator("") == 0);
 	}
 
-	SECTION("Number")
+	SECTION("Single number returns itself")
 	{
 		
 	}
