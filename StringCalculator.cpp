@@ -2,6 +2,7 @@
 #include "StringCalculator.hpp"
 #include <algorithm>
 #include <exception>
+#include <vector>
 
 double StringCalculator(std::string myString)
 {
@@ -35,19 +36,21 @@ double StringCalculator(std::string myString)
         myString.pop_back();
     }
 
+    enum {firstNumber, secondNumber, thirdNumber};
+    std::vector<double> numbers(0,3);
+
     if (!threeNumbersPresent) {thirdNumber_String = "0";}
     if (!twoNumbersPresent)   {secondNumber_String = "0";}
 
-    double firstNumber_Double  = std::stod(myString);
-    double secondNumber_Double = std::stod(secondNumber_String);
-    double thirdNumber_Double  = std::stod(thirdNumber_String);
+    numbers[firstNumber]  = std::stod(myString);
+    numbers[secondNumber] = std::stod(secondNumber_String);
+    numbers[thirdNumber]  = std::stod(thirdNumber_String);
 
-    if (firstNumber_Double < 0  ||
-        secondNumber_Double < 0 ||
-        thirdNumber_Double < 0)
+    for (auto number: numbers)
     {
-        throw std::logic_error("Cannot add negative numbers");
+        if (number < 0)
+            throw std::logic_error("Cannot add negative numbers");
     }
 
-    return firstNumber_Double + secondNumber_Double + thirdNumber_Double;
+    return numbers[firstNumber] + numbers[secondNumber] + numbers[thirdNumber];
 }
