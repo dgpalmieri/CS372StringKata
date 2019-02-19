@@ -23,11 +23,15 @@ TEST_CASE("String Calculator Tests") {
         REQUIRE(StringCalculator("1,1") == 2);
         REQUIRE(StringCalculator("2,2") != 5);                  // credit: G. Orwell
         REQUIRE(StringCalculator("5,7") == 12);
-        REQUIRE(StringCalculator("13.13, 5.66") == 18.79);
+        REQUIRE(StringCalculator("13.13,5.66") == 18.79);
         REQUIRE(StringCalculator("21,21") == 42);
 	}
 
 	SECTION("Two Numbers Separated by Newlines Add Together") {
+        REQUIRE(StringCalculator("0\n0") == 0);
+        REQUIRE(StringCalculator("2\n2") == 4);
+        REQUIRE(StringCalculator("5\n12.5") == 17.5);
+        REQUIRE(StringCalculator("42\n42") == 84);
 
 	}
 
