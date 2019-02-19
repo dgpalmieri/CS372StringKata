@@ -1,4 +1,7 @@
-./idea
+./.idea/*
 *.iml
 *.xml
 catch.hpp
+./cmake-build-debug/*
+CMakeLists.txt
+
