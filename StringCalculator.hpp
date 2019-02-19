@@ -4,7 +4,7 @@
 #include"catch.hpp"
 #include<string>
 
-int StringCalculator(std::string myString);
+double StringCalculator(std::string myString);
 
 #endif //STRINGCALCULATOR_HPP
 
