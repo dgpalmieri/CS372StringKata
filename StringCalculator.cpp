@@ -12,7 +12,7 @@ double StringCalculator(std::string myString)
 	for (auto z : myString){
 		if (twoNumbersPresent)
 			secondNumber.push_back(z);
-	    if (z == ',')
+	    if (z == ',' || z == '\n')
 	        twoNumbersPresent = true;
 	}
 
