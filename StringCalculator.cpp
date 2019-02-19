@@ -37,7 +37,7 @@ double StringCalculator(std::string myString)
     }
 
     enum {firstNumber, secondNumber, thirdNumber};
-    std::vector<double> numbers(0,3);
+    std::vector<double> numbers(3,0);
 
     if (!threeNumbersPresent) {thirdNumber_String = "0";}
     if (!twoNumbersPresent)   {secondNumber_String = "0";}
@@ -50,6 +50,7 @@ double StringCalculator(std::string myString)
     {
         if (number < 0)
             throw std::logic_error("Cannot add negative numbers");
+
     }
 
     return numbers[firstNumber] + numbers[secondNumber] + numbers[thirdNumber];
