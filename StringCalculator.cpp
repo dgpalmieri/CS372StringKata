@@ -13,7 +13,7 @@ double StringCalculator(std::string myString)
 	bool threeNumbersPresent = false;
 	std::string secondNumber_String;
 	std::string thirdNumber_String;
-	for (auto z : myString){
+	for (const auto & z : myString){
 
 		if (twoNumbersPresent && !threeNumbersPresent)
 			secondNumber_String.push_back(z);
@@ -46,11 +46,12 @@ double StringCalculator(std::string myString)
     numbers[secondNumber] = std::stod(secondNumber_String);
     numbers[thirdNumber]  = std::stod(thirdNumber_String);
 
-    for (auto number: numbers)
+    for (auto & number: numbers)
     {
         if (number < 0)
             throw std::logic_error("Cannot add negative numbers");
-
+        if (number > 1000)
+            number = 0;
     }
 
     return numbers[firstNumber] + numbers[secondNumber] + numbers[thirdNumber];
