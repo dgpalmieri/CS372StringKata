@@ -5,12 +5,12 @@ using std::string;
 
 TEST_CASE("String Calculator Tests") {
 
-	SECTION("Empty String returns 0")
+	SECTION("Empty String Returns 0")
 	{
 		REQUIRE(StringCalculator("") == 0);
 	}
 
-	SECTION("Single number returns itself")
+	SECTION("Single number Returns itself")
 	{
 		REQUIRE(StringCalculator("0") == 0);
 		REQUIRE(StringCalculator("1") == 1);
@@ -54,8 +54,12 @@ TEST_CASE("String Calculator Tests") {
         REQUIRE_THROWS(StringCalculator("66\n97\n-128"));
 	}
 
-	SECTION("Number Over a Thousand") {
-
+	SECTION("Number Over One Thousand Are Ignored") {
+		REQUIRE(StringCalculator("0,1001,0") == 0);
+		REQUIRE(StringCalculator("5,12345,2019") == 5);
+		REQUIRE(StringCalculator("6345,9928,93857394") == 0);
+		REQUIRE(StringCalculator("5,1000,5") == 1010);
+		REQUIRE(StringCalculator("0,0,1000") == 1000);
 	}
 
 	SECTION("Single Char Custom Deliminator") {
