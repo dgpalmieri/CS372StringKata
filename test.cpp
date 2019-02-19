@@ -21,7 +21,7 @@ TEST_CASE("String Calculator Tests") {
 	SECTION("Two Numbers Separated by Commas Add Together") {
         REQUIRE(StringCalculator("0,0") == 0);
         REQUIRE(StringCalculator("1,1") == 2);
-        REQUIRE(StringCalculator("2,2") != 5);                  // credit: G. Orwell
+        REQUIRE_FALSE(StringCalculator("2,2") == 5);       // credit: G. Orwell
         REQUIRE(StringCalculator("5,7") == 12);
         REQUIRE(StringCalculator("13.13,5.66") == 18.79);
         REQUIRE(StringCalculator("21,21") == 42);
