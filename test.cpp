@@ -18,7 +18,7 @@ TEST_CASE("String Calculator Tests") {
 		REQUIRE(StringCalculator("10") == 10);
 	}
 
-	SECTION("Numbers Separated by Commas Add Together") {
+	SECTION("Two Numbers Separated by Commas Add Together") {
         REQUIRE(StringCalculator("0,0") == 0);
         REQUIRE(StringCalculator("1,1") == 2);
         REQUIRE(StringCalculator("2,2") != 5);                  // credit: G. Orwell
@@ -27,14 +27,14 @@ TEST_CASE("String Calculator Tests") {
         REQUIRE(StringCalculator("21,21") == 42);
 	}
 
-	SECTION("Number Newline Number") {
+	SECTION("Two Numbers Separated by Newlines Add Together") {
 
 	}
 
-	SECTION("Number Delimination Number Delimination Number"){
+	SECTION("Three Numbers with Either Deliminator Return their Sum"){
 	}
 
-	SECTION("Negative Number") {
+	SECTION("Negative Numbers Throw Exceptions") {
 	
 	}
 
