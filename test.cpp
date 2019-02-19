@@ -46,7 +46,12 @@ TEST_CASE("String Calculator Tests") {
 	}
 
 	SECTION("Negative Numbers Throw Exceptions") {
-	
+	    REQUIRE_THROWS(StringCalculator("-1"));
+        REQUIRE_THROWS(StringCalculator("-5"));
+        REQUIRE_THROWS(StringCalculator("1,-1"));
+        REQUIRE_THROWS(StringCalculator("3\n-5"));
+        REQUIRE_THROWS(StringCalculator("24,24,-42"));
+        REQUIRE_THROWS(StringCalculator("66\n97\n-128"));
 	}
 
 	SECTION("Number Over a Thousand") {
