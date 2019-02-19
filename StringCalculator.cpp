@@ -34,12 +34,12 @@ double StringCalculator(std::string myString)
         myString.pop_back();
     }
 
+    if (!threeNumbersPresent) {thirdNumber_String = "0";}
+    if (!twoNumbersPresent)   {secondNumber_String = "0";}
+
     double firstNumber_Double  = std::stod(myString);
     double secondNumber_Double = std::stod(secondNumber_String);
     double thirdNumber_Double  = std::stod(thirdNumber_String);
-
-    if (!threeNumbersPresent) {thirdNumber_Double = 0;}
-    if (!twoNumbersPresent)   {secondNumber_Double = 0;}
 
     return firstNumber_Double + secondNumber_Double + thirdNumber_Double;
 
