@@ -50,20 +50,4 @@ double StringCalculator(std::string myString)
     }
 
     return firstNumber_Double + secondNumber_Double + thirdNumber_Double;
-
-//	if (twoNumbersPresent && !threeNumbersPresent) {
-//		for (size_t i = 0; i < secondNumber_String.size() + 1; ++i) {
-//			myString.pop_back();
-//		}
-//		return std::stod(myString) + std::stod(secondNumber_String);
-//	}
-//	else if (twoNumbersPresent && threeNumbersPresent) {
-//        for (int i = 0; i < secondNumber_String.size() + thirdNumber_String.size(); ++i) {
-//            myString.pop_back();
-//        }
-//        return std::stod(myString) + std::stod(secondNumber_String) + std::stod(thirdNumber_String);
-//	}
-//	else
-//	    return std::stod(myString);
-
 }
