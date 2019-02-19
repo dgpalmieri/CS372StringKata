@@ -32,10 +32,17 @@ TEST_CASE("String Calculator Tests") {
         REQUIRE(StringCalculator("2\n2") == 4);
         REQUIRE(StringCalculator("5\n12.5") == 17.5);
         REQUIRE(StringCalculator("42\n42") == 84);
-
 	}
 
 	SECTION("Three Numbers with Either Deliminator Return their Sum"){
+        REQUIRE(StringCalculator("0,0,0") == 0);
+        REQUIRE(StringCalculator("1,1,1") == 3);
+        REQUIRE(StringCalculator("1,2,3") == 6);
+        REQUIRE(StringCalculator("10,25,33") == 68);
+        REQUIRE(StringCalculator("0\n0\n0") == 0);
+        REQUIRE(StringCalculator("3\n3\n3") == 9);
+        REQUIRE(StringCalculator("9\n8\n7") == 25);
+        REQUIRE(StringCalculator("12\n42\n156") == 210);
 	}
 
 	SECTION("Negative Numbers Throw Exceptions") {
