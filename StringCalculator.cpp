@@ -18,12 +18,12 @@ double StringCalculator(std::string myString)
 		if (threeNumbersPresent)
 		    thirdNumber.push_back(z);
 
-	    if (z == ',' || z == '\n')
+	    if (z == ',' || z == '\n') {
             if (twoNumbersPresent)
                 threeNumbersPresent = true;
-	        if (!twoNumbersPresent)
-	            twoNumbersPresent = true;
-
+            if (!twoNumbersPresent)
+                twoNumbersPresent = true;
+        }
 	}
 
 	if (twoNumbersPresent && !threeNumbersPresent) {

@@ -41,7 +41,7 @@ TEST_CASE("String Calculator Tests") {
         REQUIRE(StringCalculator("10,25,33") == 68);
         REQUIRE(StringCalculator("0\n0\n0") == 0);
         REQUIRE(StringCalculator("3\n3\n3") == 9);
-        REQUIRE(StringCalculator("9\n8\n7") == 25);
+        REQUIRE(StringCalculator("9\n8\n7") == 24);
         REQUIRE(StringCalculator("12\n42\n156") == 210);
 	}
 
