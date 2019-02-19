@@ -1,6 +1,7 @@
 #include "catch.hpp"
 #include "StringCalculator.hpp"
 #include <algorithm>
+#include <exception>
 
 double StringCalculator(std::string myString)
 {
@@ -40,6 +41,13 @@ double StringCalculator(std::string myString)
     double firstNumber_Double  = std::stod(myString);
     double secondNumber_Double = std::stod(secondNumber_String);
     double thirdNumber_Double  = std::stod(thirdNumber_String);
+
+    if (firstNumber_Double < 0  ||
+        secondNumber_Double < 0 ||
+        thirdNumber_Double < 0)
+    {
+        throw std::logic_error("Cannot add negative numbers");
+    }
 
     return firstNumber_Double + secondNumber_Double + thirdNumber_Double;
 
