@@ -18,7 +18,7 @@ TEST_CASE("String Calculator Tests") {
 		REQUIRE(StringCalculator("10") == 10);
 	}
 
-	SECTION("Number Comma Number") {
+	SECTION("Numbers Separated by Commas Add Together") {
 
 	}
 
